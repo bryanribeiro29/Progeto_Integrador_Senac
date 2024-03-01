@@ -5,7 +5,7 @@ export default function Menu() {
   return (<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
     <div>
       <Link className="Menu ms-2 link" href="/">Menu</Link>
-      <Link className="Cadastro ms-2 link" href="/">Cadastro</Link>
+      <Link className="Cadastro ms-2 link" href="/Cadastro">Cadastro</Link>
     </div>
     <div>
       <input />

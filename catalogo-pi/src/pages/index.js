@@ -20,7 +20,7 @@ export default function Home() {
 
     <div> <Menu/>
       <div className="container-fluid mt-2">
-        <div className="row">
+        <div className="row mt-2">
           {
             listaProduto.map((dado, index) =>
               <Produto
