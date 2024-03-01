@@ -2,10 +2,21 @@ import CustomCheckBoxLabel from "@/componentes/CustomCheckboxLabel"
 import CustomInputlabel from "@/componentes/CustomInputLabel"
 import CustomTextAreaLabel from "@/componentes/CustomTextAreaLabel"
 import Menu from "@/componentes/Menu"
+import axios from "axios"
+import { useState } from "react"
 
 
 
 export default function cadastro() {
+
+    const [dadosPRoduto, setDadosProdutos] = useState({})
+
+    function handleSalvar()
+    {
+        //Enviaremos o post para a API
+        axios.post("https://localhost:7282/api/Produto")
+            .then(res => console.log(res))
+    }
 
     return (
         <>
