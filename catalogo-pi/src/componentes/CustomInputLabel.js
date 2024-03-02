@@ -3,7 +3,7 @@ export default function CustomInputlabel(props){
 
 <div className={`col-md-${props.col} mb-3`}>
         <label className="form-label" htmlFor={props.id}>{props.texto}</label>
-        <input className="form-control" id={props.id} type="text" />
+        <input className="form-control" onChange={props.onChange} id={props.id} type="text" />
       </div>
   )
 
