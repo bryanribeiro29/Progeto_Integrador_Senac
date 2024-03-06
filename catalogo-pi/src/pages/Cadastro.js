@@ -53,8 +53,8 @@ export default function cadastro() {
             <div className="container-fluid">
                 <div className="row">
 
-                    <CustomInputlabel id="nome" onChange={handleChange} text="Nome" col="8" />
-                    <CustomInputlabel id="preco" onChange={handleChange} text="Preço" col="4" />
+                    <CustomInputlabel id="nome" onChange={handleChange} texto="Nome" col="8" />
+                    <CustomInputlabel id="preco" onChange={handleChange} texto="Preço" col="4" />
                     <CustomTextAreaLabel id="descricao" onChange={handleChange} text="Descrição" col="12" />
                     <CustomInputlabel id="imagem" onChange={handleChange} texto="URL da imagem" col="12" />
                     <CustomCheckBoxLabel id="disponivel" onChange={handleChange} texto="Disponível" col="6" />

@@ -12,8 +12,10 @@ export default function Menu() {
       <button className="btn btn-primary ms-2">Pesquisar</button>
 
 
-      <button className="carrinho " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"> 
-     <Image src={"/assets/car.png"}width={35}height={35}/> 
+
+
+      <button className="carrinho " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+        <Image src={"/assets/car.png"} width={35} height={35} />
       </button>
 
       <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
