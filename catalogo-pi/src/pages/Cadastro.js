@@ -9,12 +9,11 @@ import { useState } from "react"
 
 export default function cadastro() {
 
-    function handleSalvar(e){
+    function handleSalvar(e) {
         console.log(e.target)
         //console.log(e.target.id)
 
-        if (e.target.type == "checkbox")
-        {
+        if (e.target.type == "checkbox") {
             dadosProduto[e.target.id] = e.target.checked
         } else {
             dadosProduto[e.target.id] = e.target.value
@@ -22,25 +21,26 @@ export default function cadastro() {
     }
 
     const [dadosProduto, setDadosProdutos] = useState({
-                                                            id: 0,
-                                                            nome : "",
-                                                            descricao : "",
-                                                            preco : 0,
-                                                            novidade : true,
-                                                            disponivel : true,
+        id: 0,
+        nome: "",
+        descricao: "",
+        preco: 0,
+        novidade: true,
+        disponivel: true,
     })
 
-    function handleSalvar()
-    {
+    function handleSalvar() {
         //Enviaremos o post para a API
-        axios.post("https://localhost:7282/api/Produto")
+        axios.post("https://localhost:7282/api/Produto", dadosProduto)
             .then(res => console.log(res))
     }
 
-    function handleChange(e){
+    function handleChange(e) {
         //console.log(e.target.id, e.target.value)
 
-        dadosProduto[e.target.id] = e.target.value
+        if (e.target.type == "checkbox")
+            dadosProduto[e.target.id] = e.target.checked
+        else dadosProduto[e.target.id] = e.target.value
 
         setDadosProdutos(dadosProduto)
 
@@ -56,7 +56,7 @@ export default function cadastro() {
                     <CustomInputlabel id="nome" onChange={handleChange} texto="Nome" col="8" />
                     <CustomInputlabel id="preco" onChange={handleChange} texto="Preço" col="4" />
                     <CustomTextAreaLabel id="descricao" onChange={handleChange} text="Descrição" col="12" />
-                    <CustomInputlabel id="imagem" onChange={handleChange} texto="URL da imagem" col="12" />
+                    <CustomInputlabel id="image" onChange={handleChange} texto="URL da imagem" col="12" />
                     <CustomCheckBoxLabel id="disponivel" onChange={handleChange} texto="Disponível" col="6" />
                     <CustomCheckBoxLabel id="novidade" onChange={handleChange} texto="Novidade" col="6" />
                 </div>
