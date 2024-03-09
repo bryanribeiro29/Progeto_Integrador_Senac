@@ -25,11 +25,13 @@ export default function cadastro() {
         nome: "",
         descricao: "",
         preco: 0,
+        image: "",
         novidade: true,
         disponivel: true,
     })
 
     function handleSalvar() {
+        alert("Produto inserido.")
         //Enviaremos o post para a API
         axios.post("https://localhost:7282/api/Produto", dadosProduto)
             .then(res => console.log(res))
